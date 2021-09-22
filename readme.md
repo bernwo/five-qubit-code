@@ -8,7 +8,7 @@ This python program is useful to check that the five-qubit code indeed produces 
 
 The quantum circuit of the five-qubit code is shown below.
 
-![5_qubit_code_qcircuit]("assets/5_qubit_code_qcircuit.pdf")
+![5_qubit_code_qcircuit](assets/5_qubit_code_qcircuit.pdf)
 
 ## How to run?
 
