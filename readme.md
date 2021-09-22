@@ -4,6 +4,12 @@ This repository contains my implementation of the (non-fault tolerant) [Five-qub
 
 This python program is useful to check that the five-qubit code indeed produces non-degenerate outcomes from the syndrome measurements.
 
+## The quantum circuit
+
+The quantum circuit of the five-qubit code is shown below.
+
+![5_qubit_code_qcircuit]("assets/5_qubit_code_qcircuit.pdf")
+
 ## How to run?
 
 Go to the corresponding path then from your commandline, run:
