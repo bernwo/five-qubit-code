@@ -1,5 +1,6 @@
 import pandas as pd
-from qiskit import QuantumCircuit, Aer, execute, QuantumRegister, ClassicalRegister
+from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister, transpile
+from qiskit_aer import Aer
 
 """
 This code is an implementation of the (non-fault tolerant) 5-qubit-code, otherwise known as the [[5,1,3]] code or the perfect code.
@@ -60,7 +61,7 @@ def S3(U,ancillas,qubits):
 
 def iterate_single_qubit_errors():
     """
-    The expected output should be:                        
+    The expected output should be:
     Single qubit error  Syndrome
     X[0]                   1001
     X[1]                   0010
@@ -115,7 +116,9 @@ def iterate_single_qubit_errors():
         U.h(ancillas)
         U.barrier()
         U.measure(ancillas,creg)
-        results = execute(U, backend, shots=128).result()
+        
+        compiled_qc = transpile(U, backend)
+        results = backend.run(compiled_qc, shots=128).result()
         counts = results.get_counts()
         assert len(counts) == 1 # assert that there is only one unique syndrome measurement for each single qubit error
         syndromes.append( list( counts.keys() )[0] )
