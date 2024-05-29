@@ -10,18 +10,26 @@ The quantum circuit of the five-qubit code is shown below.
 
 ![5_qubit_code_qcircuit](assets/5_qubit_code_qcircuit.png)
 
+## Prerequisite
+
+```shell
+python3 -m pip install qiskit
+python3 -m pip install qiskit-aer
+```
+
 ## How to run?
 
 Go to the corresponding path then from your commandline, run:
-```python
-    py main.py
+
+```shell
+    python3 main.py
 ```
 
 ## References
 
 Some references that I found useful while implementing the five-qubit code.
 
- * https://web.mit.edu/8.371/www/lectures/lect06.pdf
- * https://www.lorentz.leidenuniv.nl/quantumcomputers/literature/preskill_7.pdf
- * https://arxiv.org/pdf/1010.3242.pdf
- * https://www.physics.unlv.edu/~bernard/MATH_book/Chap9/Notebook9_3.pdf
+- https://web.mit.edu/8.371/www/lectures/lect06.pdf
+- https://www.lorentz.leidenuniv.nl/quantumcomputers/literature/preskill_7.pdf
+- https://arxiv.org/pdf/1010.3242.pdf
+- https://www.physics.unlv.edu/~bernard/MATH_book/Chap9/Notebook9_3.pdf
